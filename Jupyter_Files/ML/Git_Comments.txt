@@ -1,0 +1,50 @@
+1. Setting Up (Do this once)
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+
+2. Starting a Repository
+
+# Initialize a brand new local Git repository in your current folder
+git init
+
+# OR: Copy an existing repository from GitHub to your computer
+git clone https://github.com/username/repository-name.git
+
+3. The Daily Workflow (Save Your Changes)
+
+# 1. See which files you modified, added, or deleted
+git status
+
+# 2. Stage your files (tell Git: "get these files ready to be saved")
+git add index.html        # Stages a single file
+git add .                 # Stages ALL changed files in the folder
+
+# 3. Commit your files (takes the "snapshot" and saves it permanently)
+git commit -m "Add login page layout"
+
+-- Face Pull Error 
+So execute 
+	git pull origin main --rebase
+	still issue
+
+4. Sharing with GitHub (Push & Pull)
+
+# Send your local saved changes up to GitHub
+git push origin main
+
+# Download any new changes your teammates made on GitHub to your computer
+git pull origin main
+
+
+
+5. Working with Branches (Experimenting Safely)
+
+# Create a new branch and switch to it immediately
+git checkout -b feature/dark-mode
+
+# Switch back to your main branch
+git checkout main
+
+# Merge your finished "dark-mode" branch features back into main
+git merge feature/dark-mode
