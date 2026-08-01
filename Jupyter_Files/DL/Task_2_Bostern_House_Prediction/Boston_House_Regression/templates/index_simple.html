@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boston House Prediction</title>
+</head>
+<body>
+<h2>Boston House Price Prediction</h2>
+<form action="/predict" method="POST">
+{% for i in range(1,14) %}
+<label>Feature {{i}}</label>
+<input type="text"
+       name="feature{{i}}"
+       required>
+<br><br>
+{% endfor %}
+<input type="submit" value="Predict">
+</form>
+</body>
+</html>

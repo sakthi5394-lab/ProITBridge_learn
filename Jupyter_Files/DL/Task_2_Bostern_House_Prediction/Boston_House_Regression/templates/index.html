@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boston House Price Prediction</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            padding:40px;
+        }
+
+        .container{
+            width:600px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        label{
+            display:block;
+            margin-top:10px;
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:8px;
+        }
+
+        button{
+            margin-top:20px;
+            width:100%;
+            padding:10px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+<h2>Boston House Price Prediction</h2>
+<form action="/predict" method="POST">
+<label>CRIM (Crime Rate)</label>
+<input type="number" step="any" name="CRIM" required>
+<label>ZN (Residential Land Zoned)</label>
+<input type="number" step="any" name="ZN" required>
+<label>INDUS (Non-retail Business Acres)</label>
+<input type="number" step="any" name="INDUS" required>
+<label>CHAS (Charles River: 0 or 1)</label>
+<input type="number" step="any" name="CHAS" required>
+<label>NOX (Nitric Oxide Concentration)</label>
+<input type="number" step="any" name="NOX" required>
+<label>RM (Average Number of Rooms)</label>
+<input type="number" step="any" name="RM" required>
+<label>AGE (Owner Occupied Units Age)</label>
+<input type="number" step="any" name="AGE" required>
+<label>DIS (Distance to Employment Centres)</label>
+<input type="number" step="any" name="DIS" required>
+<label>RAD (Accessibility to Highways)</label>
+<input type="number" step="any" name="RAD" required>
+<label>TAX (Property Tax Rate)</label>
+<input type="number" step="any" name="TAX" required>
+<label>PTRATIO (Pupil-Teacher Ratio)</label>
+<input type="number" step="any" name="PTRATIO" required>
+<label>B (Black Population Index)</label>
+<input type="number" step="any" name="B" required>
+<label>LSTAT (% Lower Status Population)</label>
+<input type="number" step="any" name="LSTAT" required>
+<button type="submit">
+Predict House Price
+</button>
+</form>
+</div>
+</body>
+</html>
