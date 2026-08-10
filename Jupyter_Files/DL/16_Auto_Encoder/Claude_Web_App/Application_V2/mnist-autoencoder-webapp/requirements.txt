@@ -1,0 +1,15 @@
+# Core web framework
+Flask==3.0.3
+Werkzeug==3.0.4
+
+# Model inference
+# tensorflow>=2.16 bundles Keras 3, which still loads legacy .h5 files
+# fine via tf.keras.models.load_model() for a plain Sequential model like
+# this one (no custom layers/losses). Pinned to a tested minor range
+# rather than an exact version so security patches can still land.
+tensorflow>=2.16,<2.18
+numpy>=1.26,<2.0
+Pillow>=10.0
+
+# Testing
+pytest>=8.0
